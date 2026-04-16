@@ -80,6 +80,9 @@ constraint- ограничения (5)
 4. NOT NULL
 5. UNIQUE
 
+<img width="311" height="314" alt="{958EFC41-C171-4C84-B686-7D464D9BB09B}" src="https://github.com/user-attachments/assets/46552190-c07b-4a9b-996f-186376aaaffa" />
+
+
 ```sql
 --FOREIGN KEY
 CREATE TABLE opetamine(
