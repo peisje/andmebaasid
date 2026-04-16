@@ -6,7 +6,7 @@ andmebaasidega seotud SQL kood ja konspektid
 - veerg = väli - поле *cтолбец
 - rida = kirje - записи
 - andmebaasi haldussüstem - tarkvara, millega abil saab luua andmebaas: mariaDB / XAMPP, SQL SERVER managment Studio.
-- <img width="235" height="252" alt="{834C33C7-CB56-413D-9248-9F789C51D8B1}" src="https://github.com/user-attachments/assets/8b04ad1b-8269-49c1-ad9d-95daa1b65247" />
+- <img width="300" height="350" alt="{834C33C7-CB56-413D-9248-9F789C51D8B1}" src="https://github.com/user-attachments/assets/8b04ad1b-8269-49c1-ad9d-95daa1b65247" />
 
 - primaarne võti -PRIMARY KEY - veerg(tavaliselt id nimega), unikaalne identifikaator, mis eristab iga kirje.
 - välisvõti - FOREIGN KEY -FK- veerg, mis loob seos teise tabeli primaarvõtmega.
