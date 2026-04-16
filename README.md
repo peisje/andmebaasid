@@ -22,7 +22,7 @@ andmebaasidega seotud SQL kood ja konspektid
 
 ## SQL - structure Query Language - struktureeritud päringu keel
 - Tabeli loomine
-  ```
+```
   CREATE DATABASE kovalenkobaas;
 
 --ab kustutamine
@@ -41,7 +41,7 @@ aadres TEXT,
 keskmineHinne decimal(2,1) );--(2--kokku, 1- peale komat nt 4.5)
 
 SELECT * FROM opilane;
-  ```
+```
 - Andmete sisetamine tabelisse
   ```
   ```
