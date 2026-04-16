@@ -22,7 +22,7 @@ andmebaasidega seotud SQL kood ja konspektid
 
 ## SQL - structure Query Language - struktureeritud päringu keel
 - Tabeli loomine
-```
+```sql
   CREATE DATABASE kovalenkobaas;
 
 --ab kustutamine
