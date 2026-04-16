@@ -55,8 +55,8 @@ VALUES ('sereda', 'ivan', 4.2),
 ```
 
 ## Seosed (tabelivahelised seosed)
--üks-ühele (nt mees-naine)
--üks-mitmele (nt ema-lapsed)
+- üks-ühele (nt mees-naine)
+- üks-mitmele (nt ema-lapsed)
 <img width="490" height="269" alt="{51DEA6FB-D670-4F79-BB39-69DA04B62102}" src="https://github.com/user-attachments/assets/5e60df58-bab8-4567-913c-963f281c6b24" />
 
 
