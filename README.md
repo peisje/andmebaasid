@@ -43,5 +43,13 @@ keskmineHinne decimal(2,1) );--(2--kokku, 1- peale komat nt 4.5)
 SELECT * FROM opilane;
 ```
 - Andmete sisetamine tabelisse
-  ```
-  ```
+```sql 
+--tabeli täitmine
+INSERT INTO opilan
+VALUES ('dasa','kovalenko', '2008-08-10', 1, '+493080', 'talinn', 4.5);
+
+INSERT INTO opilan(perenimi, eesnimi, keskmineHinne)
+VALUES ('sereda', 'ivan', 4.2),
+('holovanov', 'ivan', 4.2),
+('suvorov', 'marko', 5.0);
+```
