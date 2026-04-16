@@ -30,8 +30,8 @@ DROP DATABASE TITpv24kovalenko;
 
 use kovalenkobaas;
 --tabeli loomine
-CREATE TABLE opilane(
-opilaneID int Primary key identity(1,1), --automaatselt täidab numbritega
+CREATE TABLE opilan(
+opilanID int Primary key identity(1,1), --automaatselt täidab numbritega
 eesnimi varchar(25),
 perenimi varchar(30) NOT NULL,
 synniaeg DATE,
@@ -40,7 +40,7 @@ mobiil varchar(13),
 aadres TEXT,
 keskmineHinne decimal(2,1) );--(2--kokku, 1- peale komat nt 4.5)
 
-SELECT * FROM opilane;
+SELECT * FROM opilan;
 ```
 - Andmete sisetamine tabelisse
 ```sql 
