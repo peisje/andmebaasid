@@ -52,13 +52,50 @@ INSERT INTO opilan(perenimi, eesnimi, keskmineHinne)
 VALUES ('sereda', 'ivan', 4.2),
 ('holovanov', 'ivan', 4.2),
 ('suvorov', 'marko', 5.0);
+
+--andmete uuendamine tabelis
+UPDATE opilan SET stip=1, aadres='tallinn'
+
+UPDATE opilan SET stip=1, aadres='tartu' WHERE opilanID=5;
+
+--kustutamine
+--tabeli kustutamine
+DROP TABLE opilan;
+--andmete kustutamine tabelis
+DELETE FROM opilan WHERE opilanID=1;
+Select * from opilan;
 ```
 
 ## Seosed (tabelivahelised seosed)
 - üks-ühele (nt mees-naine)
 - üks-mitmele (nt ema-lapsed)
 <img width="490" height="269" alt="{51DEA6FB-D670-4F79-BB39-69DA04B62102}" src="https://github.com/user-attachments/assets/5e60df58-bab8-4567-913c-963f281c6b24" />
+- mitu-mitele (nt õpilased - õpetajad)
 
+## PIIRANGUD - 
+constraint- ограничения (5)
+1. PRIMARY KEY
+2. FOREIGN KEY
+3. CHECK
+4. NOT NULL
+5. UNIQUE
+
+```sql
+--FOREIGN KEY
+CREATE TABLE opetamine(
+opetamineId int PRIMARY KEY identity(1,1),
+kuupaev DATE,
+oppeaine varchar(30),
+opilanID int,
+FOREIGN KEY (opilanID) REFERENCES opilan(opilanID),
+hinne int CHECK(hinne<=5));
+
+SELECT * FROM opetamine;
+SELECT * FROM opilan;
+--täidame tabeli
+INSERT INTO opetamine
+VALUES ('2026-04-16', 'andmebaasid', 4, 5)
+```
 
 
 
