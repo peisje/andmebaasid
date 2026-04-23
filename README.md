@@ -1,7 +1,12 @@
 ## Andmebaasid
 andmebaasidega seotud SQL kood ja konspektid
 ## Sisukord
-- [Põhimõisted](#pohimoisted)
+- [Põhimõisted](#põhimõisted)
+- [Andmetüübid](#andmetüübid)
+- [SQL - structure Query Language - struktureeritud päringu keel](#SQL - structure Query Language - struktureeritud päringu keel)
+- [Seosed (tabelivahelised seosed)](seosed (tabelivahelised seosed))
+- [PIIRANGUD](PIIRANGUD)
+- [ALTER TABLE](ALTER TABLE)
 
 
 
