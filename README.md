@@ -33,7 +33,7 @@ andmebaasidega seotud SQL kood ja konspektid
 4. Kuupäeva: date, time, datetime
 ```
 
-## SQL - structure Query Language - struktureeritud päringu keel
+## SQL - structure Query Language
 - Tabeli loomine
 ```sql
   CREATE DATABASE kovalenkobaas;
