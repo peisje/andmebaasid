@@ -102,7 +102,6 @@ VALUES ('2026-04-16', 'andmebaasid', 4, 5)
 
 ## ALTER TABLE 
 -tabeli struktuuri muutmine (struktuur: veerudenimed, andmetüübid, piirangud)
-1. uue veeru lisamine
 
 ```sql
 --uue veeru lisamine
