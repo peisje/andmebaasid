@@ -3,10 +3,10 @@ andmebaasidega seotud SQL kood ja konspektid
 ## Sisukord
 - [Põhimõisted](#põhimõisted)
 - [Andmetüübid](#andmetüübid)
-- [SQL - structure Query Language - struktureeritud päringu keel](#SQL - structure Query Language - struktureeritud päringu keel)
-- [Seosed (tabelivahelised seosed)](seosed (tabelivahelised seosed))
-- [PIIRANGUD](PIIRANGUD)
-- [ALTER TABLE](ALTER TABLE)
+- [SQL - structure Query Language](#SQL-structure-Query-Language)
+- [Seosed (tabelivahelised seosed)](#seosed-tabelivahelised-seosed)
+- [PIIRANGUD](#PIIRANGUD)
+- [ALTER TABLE](#ALTER-TABLE)
 
 
 
