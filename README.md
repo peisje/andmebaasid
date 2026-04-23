@@ -115,6 +115,41 @@ ALTER TABLE opilane ALTER COLUMN isikukood char(11);
 
 --sisseehitatud protseduur, mis näitab tabeli struktuur
 sp_help opilane;
+```sql
+--piirangute lisamine
+CREATE TABLE ryhm(
+ryhmID int not null,
+ryhmNimi char(10));
+
+--
+drop table ryhm;
+
+sp_help ryhm;
+
+--PK lisamine
+ALTER TABLE ryhm ADD CONSTRAINT pk_ryhm PRIMARY KEY (ryhmID);
+--UNIQUE lisamine
+ALTER TABLE ryhm ADD CONSTRAINT un_ryhm UNIQUE (ryhmNimi);
+
+--kontrollimiseks täidame tabelit ryhm
+SELECT * FROM ryhm;
+INSERT INTO ryhm (ryhmID, ryhmNimi)
+VALUES (1, 'TITpv24');
+
+INSERT INTO ryhm (ryhmID, ryhmNimi)
+VALUES (2, 'TITpe24');
+
+--lisame Foreign Key - võõrvõti-välisvõti
+ALTER TABLE opilane ADD ryhmID int;
+SELECT * FROM opilane;
+SELECT * FROM ryhm;
+ALTER TABLE opilane ADD CONSTRAINT fk_ryhm 
+FOREIGN KEY (ryhmID) REFERENCES ryhm(ryhmID);
+
+--kontrollimiseks- täidame tabeli opilane
+INSERT INTO opilane
+VALUES ('dasa','kovalenko', '2008-08-10', 1, '+493080', 'talinn', 4.5, '5667777', 2),
+('elina','kotsur', '2008-04-28', 1, '+408354', 'talinn', 4.4, '3849473', 1);
 ```
 
 
