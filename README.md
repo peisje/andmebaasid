@@ -115,6 +115,8 @@ ALTER TABLE opilane ALTER COLUMN isikukood char(11);
 
 --sisseehitatud protseduur, mis näitab tabeli struktuur
 sp_help opilane;
+```
+
 ```sql
 --piirangute lisamine
 CREATE TABLE ryhm(
