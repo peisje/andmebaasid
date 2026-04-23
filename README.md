@@ -3,7 +3,7 @@ andmebaasidega seotud SQL kood ja konspektid
 ## Sisukord
 - [Põhimõisted](#põhimõisted)
 - [Andmetüübid](#andmetüübid)
-- [SQL - structure Query Language](#SQL-structure-Query-Language)
+- [SQL structure Query Language](#SQL-structure-Query-Language)
 - [Seosed (tabelivahelised seosed)](#seosed-tabelivahelised-seosed)
 - [PIIRANGUD](#PIIRANGUD)
 - [ALTER TABLE](#ALTER-TABLE)
@@ -33,7 +33,7 @@ andmebaasidega seotud SQL kood ja konspektid
 4. Kuupäeva: date, time, datetime
 ```
 
-## SQL - structure Query Language
+## SQL structure Query Language
 - Tabeli loomine
 ```sql
   CREATE DATABASE kovalenkobaas;
