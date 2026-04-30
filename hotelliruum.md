@@ -131,6 +131,9 @@ VALUES (4,4);
 
 <img width="292" height="88" alt="{2F30FD53-568F-4CB8-958A-51AFC5C75244}" src="https://github.com/user-attachments/assets/e18c9ab2-fb63-4833-895a-31c634a8d00e" />
 
+## Diagramm
+<img width="1008" height="793" alt="{0EE6FCFD-C97E-43D9-891C-0248E003B013}" src="https://github.com/user-attachments/assets/80428044-960b-4386-949b-d7ec2b922353" />
+
 
 
 
