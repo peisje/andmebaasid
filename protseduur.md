@@ -54,4 +54,36 @@ EXEC otsing1taht 'e'
 ```
 <img width="321" height="163" alt="{9A42D0A0-58C4-4778-A878-1051D7E23913}" src="https://github.com/user-attachments/assets/1ef85f4b-9293-4774-8b4b-df182b417430" />
 
---g
+--lisame uus veerg
+```sql
+--lisame uus veerg
+ALTER TABLE guest ADD arveSumma money; 
+SELECT * FROM guest
+
+Update guest set arveSumma=100 WHERE guestID=4;
+```
+<img width="370" height="122" alt="{3DD834B6-4B59-4E8F-8D7F-D167125C778C}" src="https://github.com/user-attachments/assets/a2e521f0-23d0-445c-a7d1-dd9f51034976" />
+
+--OUTPUT parameetrid (min ja max väärtus)
+```sql
+--OUTPUT parameetrid (min ja max väärtus)
+CREATE PROCEDURE minmaxArve
+    @minArve MONEY OUTPUT,
+    @maxArve MONEY OUTPUT
+AS
+BEGIN
+    SELECT 
+        @minArve = MIN(arveSumma),
+        @maxArve = MAX(arveSumma)
+    FROM guest;
+END
+
+--kutse
+DECLARE @minArve MONEY, @maxArve MONEY;
+EXEC minmaxArve @minArve OUTPUT, @maxArve OUTPUT;
+PRINT 'Min Arve = ' + CONVERT(varchar, @minArve);
+PRINT 'Max Arve = ' + CONVERT(varchar, @maxArve);
+```
+<img width="527" height="308" alt="{CB27618A-2002-4F87-A303-43F53A29FF75}" src="https://github.com/user-attachments/assets/61ba62c7-ab4e-495c-a0d7-fcccc6268cfd" />
+
+--
