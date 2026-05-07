@@ -86,4 +86,60 @@ PRINT 'Max Arve = ' + CONVERT(varchar, @maxArve);
 ```
 <img width="527" height="308" alt="{CB27618A-2002-4F87-A303-43F53A29FF75}" src="https://github.com/user-attachments/assets/61ba62c7-ab4e-495c-a0d7-fcccc6268cfd" />
 
+--Protseduur veeru lisamiseks või kustutamiseks 
+```sql
+--Protseduur veeru lisamiseks või kustutamiseks 
+CREATE PROCEDURE muudatus
+    @tegevus varchar(10),
+    @tabelinimi varchar(25),
+    @veerunimi varchar(25),
+    @tyyp varchar(25) = NULL
+AS
+BEGIN
+    DECLARE @sqltegevus varchar(max);
+
+    SET @sqltegevus = CASE 
+        WHEN @tegevus = 'add' THEN 
+            CONCAT('ALTER TABLE ', @tabelinimi, ' ADD ', @veerunimi, ' ', @tyyp)
+
+        WHEN @tegevus = 'drop' THEN 
+            CONCAT('ALTER TABLE ', @tabelinimi, ' DROP COLUMN ', @veerunimi)
+    END;
+
+    PRINT @sqltegevus;
+    EXEC (@sqltegevus);
+END;
+
+--kutse(add)
+EXEC muudatus 'add', 'guest', 'testVeerg', int
+SELECT * FROM guest
+--kutse(delete)
+EXEC muudatus 'drop', 'guest', 'testVeerg', int
+```
+<img width="523" height="255" alt="{61B8789D-30CD-43D4-9823-8A990936515F}" src="https://github.com/user-attachments/assets/15561cd8-00d5-46f6-b599-a1a3da665076" />
+
+--Protseduur, mis kuvab toodete nime, hinna ja lisab automaatselt hinnangu 
+
+```sql
+--Protseduur, mis kuvab toodete nime, hinna ja lisab automaatselt hinnangu
+CREATE PROCEDURE kuvaArveHinnang
+AS
+BEGIN
+    SELECT 
+        firstname,
+		arveSumma,
+        CASE 
+            WHEN arveSumma <= 1000 THEN 'väike summa'
+            ELSE 'suur summa'
+        END AS hinnang
+    FROM guest;
+END;
+
+--kutse
+EXEC kuvaArveHinnang
+```
+<img width="279" height="215" alt="{EF8322EF-6FE1-4ACC-ACE0-15620485BEEC}" src="https://github.com/user-attachments/assets/93205be6-f7e2-4393-b136-76d78dd83fbb" />
+
 --
+
+
