@@ -1,6 +1,6 @@
-## Andmebaasi võtmed (Keys)
+# Andmebaasi võtmed (Keys)
 
-### 1. Primary Key (Primaarvõti)
+## 1. Primary Key (Primaarvõti)
 * **Lühike definitsioon:** Veerg või veergude kogum, mis tuvastab üheselt iga rea tabelis.
 * **Milleks kasutatakse:** Kirjete unikaalsuse tagamiseks ja kiireks otsinguks. Ei saa sisaldada NULL väärtusi.
 * **Mille poolest erineb:** Tabelis saab olla ainult **üks** primaarvõti.
@@ -15,7 +15,7 @@ CREATE TABLE Tootajad (
 ```
 <img width="282" height="200" alt="{4A2E0BC1-C580-4A25-907E-CA2CE042B196}" src="https://github.com/user-attachments/assets/1f428da0-a896-41ab-97fb-4176c3ca51c8" />
 
-### 2. Foreign Key (Välisvõti)
+## 2. Foreign Key (Välisvõti)
 * **Lühike definitsioon:** Veerg, mis loob seose teise tabeli primaarvõtmega.
 * **Milleks kasutatakse:** Tabelitevahelise seose (andmete terviklikkuse ehk referential integrity) tagamiseks.
 * **Mille poolest erineb:** Erinevalt primaarvõtmest võib välisvõti sisaldada korduvaid väärtusi ja NULL väärtusi.
@@ -46,7 +46,7 @@ CREATE TABLE Kasutajad (
 ```
 <img width="283" height="180" alt="{F9687F9B-329B-4C49-950E-15544D8A8D2B}" src="https://github.com/user-attachments/assets/00bdfdb0-694b-485d-b379-1b3ad1b28563" />
 
-### 4. Simple Key (Lihtvõti)
+## 4. Simple Key (Lihtvõti)
 * **Lühike definitsioon:** Võti (tavaliselt primaarvõti), mis koosneb ainult ühest ainukesest veerust.
 * **Milleks kasutatakse:** Lihtsaks ja kiireks ridade tuvastamiseks, kui üks väli on piisav unikaalsuse tagamiseks.
 * **Mille poolest erineb:** Koosneb rangelt ühest veerust, erinevalt liitvõtmetest (Composite/Compound).
@@ -77,7 +77,7 @@ CREATE TABLE TellimuseRead (
 ```
 <img width="361" height="225" alt="{4D9313F5-CD8F-4F30-AD47-BA1E3AC1DC96}" src="https://github.com/user-attachments/assets/0affa045-0155-4185-b52d-ce0fd307adc4" />
 
-### 6. Compound Key 
+## 6. Compound Key 
 * **Lühike definitsioon:** Liitvõtme alaliik, kus kõik võtme koosseisu kuuluvad veerud on ise eraldiseisvalt välisvõtmed (Foreign Keys) teistes tabelites.
 * **Milleks kasutatakse:** Tavaliselt vahetabelites (mitu-mitmele seosed ehk many-to-many), et siduda kaks olemit.
 * **Mille poolest erineb:** Kõik Composite võtmed ei pruugi olla välisvõtmed, kuid Compound võtme puhul on see kohustuslik.
@@ -94,7 +94,7 @@ CREATE TABLE Tudeng_Kursus (
 ```
 <img width="440" height="253" alt="{5D3B1462-C363-4BFC-9D98-DCABBF4C6610}" src="https://github.com/user-attachments/assets/49d046ee-8f6f-47b5-b995-eb0a29558fe0" />
 
-### 7. Superkey (Supervõti)
+## 7. Superkey (Supervõti)
 * **Lühike definitsioon:** Veergude kogum, mis tuvastab unikaalselt tabeli kirjed, kuid võib sisaldada ka üleliigseid (mittevajalikke) veerge.
 * **Milleks kasutatakse:** Teoreetiline mõiste andmebaasi disainis, millest tuletatakse kandidaatvõtmed.
 * **Mille poolest erineb:** Sisaldab "liigset" infot. Näiteks (Isikukood, Eesnimi) on supervõti, sest isikukoodist üksi juba piisaks.
@@ -109,12 +109,12 @@ CREATE TABLE Kliendid (
 ```
 <img width="343" height="237" alt="{E3814162-B480-4440-A498-749C11273DAC}" src="https://github.com/user-attachments/assets/228687d9-8dcb-4b84-9b3a-f9d12d3af414" />
 
-### 8. Candidate Key (Kandidaatvõti)
+## 8. Candidate Key (Kandidaatvõti)
 * **Lühike definitsioon:** Minimaalne supervõti (veerg või veergude kogum), mis tuvastab unikaalselt iga rea tabelis, ilma et sisaldaks üleliigseid andmeid.
 * **Milleks kasutatakse:** Seda kasutatakse potentsiaalse kandidaadina tabeli primaarvõtme (Primary Key) kohale. Disainer valib kõigi kandidaatvõtmete seast ühe, millest saab reaalne primaarvõti.
 * **Mille poolest erineb:** Erinevalt supervõtmest ei tohi kandidaatvõtmes olla ühtegi "üleliigset" veergu (kui eemaldame kas või ühe veeru, kaob unikaalsus). Tabelis võib olla mitu kandidaatvõtit.
 
-### 9. Alternate Key (Alternatiivvõti)
+## 9. Alternate Key (Alternatiivvõti)
 * **Lühike definitsioon:** Kandidaatvõti, mida andmebaasi projekteerimisel ei valitud tabeli primaarvõtmeks.
 * **Milleks kasutatakse:** Kirjete täiendavaks unikaalseks tuvastamiseks. Andmebaasis realiseeritakse see tavaliselt `UNIQUE` piirangu (constraint) abil.
 * **Mille poolest erineb:** See on otsene "asendaja" või alternatiiv primaarvõtmele. Kui primaarvõti on unikaalne ja kohustuslik, siis alternatiivvõti tagab samuti unikaalsuse, kuid võib tehniliselt lubada ka NULL väärtust (sõltuvalt reeglitest).
