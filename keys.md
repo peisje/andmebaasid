@@ -136,6 +136,12 @@ SELECT Kliendi_ID, Isikukood FROM Kliendi;
  - Selles tabelis on kaks kandidaatvõtit (Candidate Key): Kliendi_ID ja Isikukood.
  - Kuna me määratlesime Kliendi_ID kui PRIMARY KEY, siis Isikukood muutus automaatselt alternatiivvõtmeks (Alternate Key), mille unikaalsust tagab märksõna UNIQUE.
 
+## Kasutatud allikad
+1. https://www.geeksforgeeks.org/dbms/difference-between-primary-key-and-foreign-key/ 
+2. https://en.wikipedia.org/wiki/Unique_key
+3. https://www.theknowledgeacademy.com/blog/keys-in-sql/
+4. https://dba.stackexchange.com/questions/3134/in-sql-is-it-composite-or-compound-keys
+5. https://medium.com/@dewmithranaweera/different-types-of-database-keys-8ec93f5d3726
 
 
 
