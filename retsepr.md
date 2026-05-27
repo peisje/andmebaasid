@@ -216,3 +216,40 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON koostis TO manager2;
 ```
 <img width="973" height="846" alt="{7B6E8C3D-6BB7-4102-BF35-D802BDD741C7}" src="https://github.com/user-attachments/assets/41cdb75b-c977-437e-90f5-dc808a9e54ff" />
 
+```sql
+--manager
+
+SELECT * FROM lemmikretsept;
+SELECT * FROM yhik;
+INSERT INTO retsept (retseptiNimi, kirjeldus, juhend, sisestatud_kp, kasutajaID, kategooriaID)
+VALUES ('Manageri Kook', 'Test', 'Sega ja küpseta', '2026-05-27', 1, 2);
+UPDATE retsept SET kirjeldus = 'Uuendatud kirjeldus manageri poolt' WHERE retseptiNimi = 'Manageri Kook';
+DELETE FROM retsept WHERE retseptiNimi = 'Manageri Kook';
+
+
+
+INSERT INTO toiduaine (toiduaineNimi) VALUES ('Manageri-Karri');
+DELETE FROM kasutaja2 WHERE kasutajaID = 1;
+
+
+
+INSERT INTO yhik (yhikNimi) VALUES ('kg');
+```
+
+```sql
+--staff 
+SELECT * FROM toiduaine;
+INSERT INTO toiduaine (toiduaineNimi) VALUES ('Test-Sool-Staff');
+SELECT * FROM kategooria;
+INSERT INTO kategooria (kagegooriaNimi) VALUES ('Test-Supp-Staff');
+SELECT * FROM kasutaja2;
+
+
+
+DELETE FROM toiduaine WHERE toiduaineID = 1;
+UPDATE kategooria SET kagegooriaNimi = 'Häkitud' WHERE kategooriaID = 1;
+INSERT INTO kasutaja2 (eesnimi, perenimi, email) VALUES ('Häkker', 'Test', 'h@h.ee');
+
+
+SELECT * FROM retsept;
+```
