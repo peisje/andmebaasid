@@ -1,6 +1,6 @@
 ## Andmebaaside konspektid | Darja 
 
-[Põhimõisted](README.md). | [Ptotseduurid](protseduur.md).
+[Põhimõisted](README.md). | [Ptotseduurid](protseduur.md). | [kasutajad](kasutaja.md). | [trigerid](triger.md). | [kodutöö keys](keys.md)
 
 andmebaasidega seotud SQL kood ja konspektid
 ## Sisukord
