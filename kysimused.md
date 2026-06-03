@@ -1,8 +1,7 @@
 ## DML: INSERT, UPDATE, DELETE. Andmete töötlemise keel
 
-[Põhimõisted](README.md) | [Ptotseduurid](protseduur.md) | [Ptotseduurid-XAMPP](protseduurXAMPP.md) | [kasutajad](kasutaja.md) | [kasutajad-XAMPP](kasutajaXAMPP.md) | [trigerid](triger.md) | 
+[Põhimõisted](README.md) | [Ptotseduurid](protseduur.md) | [Ptotseduurid-XAMPP](protseduurXAMPP.md) | [kasutajad](kasutaja.md) | [trigerid](triger.md) | 
 [kodutöö-keys](keys.md) | [hotelli-ruum](hotelliruum.md) | [DML-küsimused](kysimused.md) | [DDL-küsimused](kysimused2.md) | [retsept](retsepr.md) |
-
 - 1
 <img width="526" height="76" alt="{53586757-EA9C-4DE3-805F-6EABC3BB8291}" src="https://github.com/user-attachments/assets/92f6112c-10e1-4d7f-b2ad-b72df3f9838d" />
 
