@@ -10,4 +10,5 @@
 <img width="691" height="741" alt="{EB762C25-1431-42B7-905B-9AE317070BD9}" src="https://github.com/user-attachments/assets/fd0e5f50-11ba-4fa0-828f-02159787a8c5" />
 
 - Kontrollime
-<img width="777" height="471" alt="{8340991E-F9F0-4517-B7CF-555B5FD828CF}" src="https://github.com/user-attachments/assets/48e78958-9a24-4249-a366-cb3ebfd108b9" />
+
+<img width="816" height="569" alt="{59497D40-2239-4F27-9671-AE1F5B50A6C7}" src="https://github.com/user-attachments/assets/c723742a-89ab-4691-b7cd-74cfbe97dd4c" />
