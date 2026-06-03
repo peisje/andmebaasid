@@ -64,4 +64,53 @@ SELECT * FROM logi;
 ```
 <img width="618" height="298" alt="{47D88254-E70B-4B18-8FB1-B579A1C5BD43}" src="https://github.com/user-attachments/assets/e0631679-4d84-48fa-b9c6-769ba10d5d23" />
 
+- delete triger
+```sql
+CREATE TRIGGER linnaKustutamine
+ON linnad --tabelinimi, mis on vaja jälgida
+FOR DELETE
+AS
+INSERT INTO logi(kasutaja, aeg, toiming, andmed)
+SELECT
+SYSTEM_USER, --kasutaja
+GETDATE(),  --aeg
+'on tehtud DELETE käsk',  --toiming
+CONCAT ('linn: ',deleted.linnanimi, ' rahvaarv: ', deleted.rahvaarv)  --andmed
+FROM deleted;
+
+-- Trigeri tegevuse kontroll --kustutada tabelist linnad
+DELETE FROM linnad WHERE linnID=1;
+SELECT * FROM linnad;
+SELECT * FROM logi;
+
+```
+- update triger
+```sql
+CREATE TRIGGER linnaUuendamine
+ON linnad --tabelinimi, mis on vaja jälgida
+FOR UPDATE
+AS
+INSERT INTO logi(kasutaja, aeg, toiming, andmed)
+SELECT
+SYSTEM_USER, --kasutaja
+GETDATE(),  --aeg
+'on tehtud UPDATE käsk',  --toiming
+CONCAT ('VANAD: linn: ',deleted.linnanimi, ' rahvaarv: ', deleted.rahvaarv,
+' ||| UUED: linn: ',inserted.linnanimi, ' rahvaarv: ', inserted.rahvaarv)  --andmed
+FROM deleted INNER JOIN inserted
+ON deleted.linnID=inserted.linnID;
+
+
+-- kontrollimiseks tuleb uuendada tabeli linn
+UPDATE linnad SET linnanimi='pärnu väike', rahvaarv=50 WHERE linnID=2
+
+SELECT * FROM linnad;
+SELECT * FROM logi;
+```
+<img width="875" height="324" alt="{CA673345-A587-4D4E-9244-A5668340C7DE}" src="https://github.com/user-attachments/assets/200fb3a9-6bd9-48d3-9977-9d03360c90bc" />
+
+
+
+
+
 
